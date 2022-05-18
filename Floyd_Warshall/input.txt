@@ -1,0 +1,20 @@
+4
+INF	  7	  5	INF
+INF	INF	  7	  6
+INF	INF	INF	 11
+  4	  1	INF	INF
+case #3
+5
+  0	  1	INF	INF	  4
+INF	  0	  2	  4	INF
+INF	INF	  0	 -1	  2
+INF	INF	  2	  0	INF
+ -4	 -4	INF	 -1	  0
+case #2
+5
+  0	  1	INF	INF	  7
+INF	  0	  2	  4	INF
+INF	INF	  0	 -1	  2
+INF	INF	  2	  0	INF
+ -6	 -4	INF	 -1	  0
+case #1

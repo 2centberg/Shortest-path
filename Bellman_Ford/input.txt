@@ -1,0 +1,16 @@
+5
+1
+  0	  1	INF	INF	  7
+INF	  0	  2	  4	INF
+INF	INF	  0	 -1	  2
+INF	INF	  2	  0	INF
+ -6	 -4	INF	 -1	  0
+Note : case #1, exits negative circle
+5
+5
+  0	  1	INF	INF	  4
+INF	  0	  2	  4	INF
+INF	INF	  0	 -1	  2
+INF	INF	  2	  0	INF
+ -4	 -4	INF	 -1	  0
+Note : case #2
