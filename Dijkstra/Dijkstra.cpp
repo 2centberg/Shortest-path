@@ -32,17 +32,22 @@ void Init(int **&weights, int *&distance, int *&path, bool *&visited, int &size,
 	// Ma tran trong so weights
 	weights = new int *[size];
 	string line;
+	int e1, e2, w;
 	for (int i = 0; i < size; i++)
 	{
 		weights[i] = new int[size];
 		for (int j = 0; j < size; j++)
 		{
-			INPUT >> line;
-			if (line == "INF")
-				weights[i][j] = INF;
-			else weights[i][j] = stoi(line);
+			weights[i][j] = INF;
 		}
 	};
+	while (INPUT >> e1)
+	{
+		if (e1 == -1) break;
+		INPUT >> e2 >> w;
+		weights[e1][e2] = w;
+		weights[e2][e1] = w;
+	}
 	INPUT.close();
 	distance = new int[size];
 	for (int i = 0; i < size; i++)
@@ -62,14 +67,14 @@ void Dijkstra(int **&weights, int *&distance, int *&path, bool *&visited, const 
 {
 	printf("\nStep |");
 	for (int i = 0; i < size; i++)
-		printf("%4d   |", i+1); 
+		printf("%4d   |", i); 
 	cout << "\n  0  |";
 	for (int i = 0; i < size; i++)
 	{
 		if (i != start)
 			printf(" INF,0 |"); 
 		else
-			printf(" %2d,%-2d |", distance[i], path[i] + 1); 
+			printf(" %2d,%-2d |", distance[i], path[i]); 
 	}
 	int Not_visited = size;
 	while (Not_visited--)
@@ -105,7 +110,7 @@ void Dijkstra(int **&weights, int *&distance, int *&path, bool *&visited, const 
 			if (visited[i])
 				printf("   -   |");
 			else
-				printf(" %3d,%-2d|", distance[i], path[i] + 1);;
+				printf(" %3d,%-2d|", distance[i], path[i]);;
 		}
 	}
 }
